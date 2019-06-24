@@ -20,7 +20,7 @@ c1 = Customer()
 if run1==1:
     print("view customer")
     sql = "select * from customer"
-    con = mysql.connector.connect(user="root", password="", host="localhost", database="harsh_python")
+    con = mysql.connector.connect(user="root", password="", host="localhost", database="prabhat")
 
     cursor = con.cursor()
     cursor.execute(sql)
@@ -44,7 +44,7 @@ elif run1==2:
         c1.phone = input("Enter Customer Phone: ")
         c1.email = input("Enter Customer Email: ")
         sql = "insert into customer values(null, '{}', '{}', '{}')".format(c1.name, c1.phone, c1.email)
-        con = mysql.connector.connect(user="root", password="", host="localhost", database="harsh_python")
+        con = mysql.connector.connect(user="root", password="", host="localhost", database="prabhat")
 
     # 3. Create cursor from connection to execute sql commands : insert/update/delete and select commands
         cursor = con.cursor()
@@ -63,7 +63,7 @@ elif run1==2:
         c1.email = input("Enter Customer Email: ")
         sql = "update customer set name={} where phone={}".format(c1.name,c1.phone)
 
-        con = mysql.connector.connect(user="root", password="", host="localhost", database="harsh_python")
+        con = mysql.connector.connect(user="root", password="", host="localhost", database="prabhat")
 
         cursor = con.cursor()
         cursor.execute(sql)
@@ -80,7 +80,7 @@ elif run1==2:
         c1.email = input("Enter Customer Email: ")
         sql = "delete from customer where phone={}".format( c1.phone)
 
-        con = mysql.connector.connect(user="root", password="", host="localhost", database="harsh_python")
+        con = mysql.connector.connect(user="root", password="", host="localhost", database="prabhat")
 
         cursor = con.cursor()
         cursor.execute(sql)
@@ -95,7 +95,7 @@ elif run1==2:
         c1.phone = input("Enter Customer Phone: ")
         c1.email = input("Enter Customer Email: ")
         sql = "select * from customer where cid = {}".format(c1.cid)
-        con = mysql.connector.connect(user="root", password="", host="localhost", database="harsh_python")
+        con = mysql.connector.connect(user="root", password="", host="localhost", database="prabhat")
 
         cursor = con.cursor()
         cursor.execute(sql)
